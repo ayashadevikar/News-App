@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 import axios from "axios"
 import News from '../components/News';
+import Hero from './Hero';
 
 
 const Home = ({ cat }) => {
@@ -28,6 +29,8 @@ const Home = ({ cat }) => {
 
   return (
     <>
+      <Hero />
+      <h1 className='text-2xl font-bold underline p-10'>Top HeadLines</h1>
        {
           news ?  
            news.map((i) => (
