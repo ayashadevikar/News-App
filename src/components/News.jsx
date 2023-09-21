@@ -5,8 +5,8 @@ const News = ({title, imgSrc, content, url}) => {
     <>
        {/* mobile view */}
 
-       <div className='md:hidden flex flex-wrap'>
-          <div className='border-2 rounded-md p-2'>
+       <div className='md:hidden flex flex-col'>
+          <div className='border-2 rounded-md p-2 w-[22.2rem]'>
               <h5 className='font-bold'>{title}</h5>
               <img className='h-30 w-82' src={imgSrc} alt={title} />
               <p className=''>{content}</p>
@@ -15,7 +15,7 @@ const News = ({title, imgSrc, content, url}) => {
         </div>
 
        {/* laptop view */}
-       <div className='hidden:md flex flex-col justify-center items-center gap-y-4'>
+       <div className='hidden md:flex flex-col justify-center items-center gap-y-4'>
           <div className='border-2 rounded-md p-2'>
               <h5 className='w-[40rem] font-bold'>{title}</h5>
               <img className='h-[25rem] w-[40rem]' src={imgSrc} alt={title} />
