@@ -1,12 +1,13 @@
 import React from 'react'
 
-const News = ({title, imgSrc, content, url}) => {
+const News = ({title, imgSrc, content, url, id}) => {
   return (
     <>
        {/* mobile view */}
 
        <div className='md:hidden flex flex-col'>
           <div className='border-2 rounded-md p-2 w-[22.2rem]'>
+            <p>{id}</p>
               <h5 className='font-bold'>{title}</h5>
               <img className='h-30 w-82' src={imgSrc} alt={title} />
               <p className=''>{content}</p>
