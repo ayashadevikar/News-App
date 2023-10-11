@@ -19,13 +19,12 @@ function App() {
          <Navbar />
         
             <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/business" element={<Home cat="business"/>} />
-                  <Route path="/entertainment" element={<Home cat="entertainment"/>} />
-                  <Route path="/health" element={<Home cat="health"/>} />
-                  <Route path="/science" element={<Home cat="science"/>} />
-                  <Route path="/sports" element={<Home cat="sports"/>} />
-                  <Route path="/technology" element={<Home cat="technology"/>} />
+                  <Route   path="/" element={<Home />} />
+                  <Route   path="/business" element={<Home cat="business"/>} />
+                  <Route   path="/entertainment" element={<Home cat="entertainment"/>} />
+                  <Route  path="/health" element={<Home cat="health"/>} />
+                  <Route  path="/science" element={<Home cat="science"/>} />
+                  <Route   path="/technology" element={<Home cat="technology"/>} />
             </Routes>
 
          <Footer />
