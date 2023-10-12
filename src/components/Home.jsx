@@ -14,8 +14,8 @@ const Home = ({ cat }) => {
         const fetchTopHeadings = async () => {
            const { data } = await axios.get(
            cat 
-           `https://newsapi.org/v2/top-headlines?country=in&category=${cat}&apiKey=7041b7213f50405a972157577c7ad627`
-         
+           ? `https://newsapi.org/v2/top-headlines?country=in&category=${cat}&apiKey=7041b7213f50405a972157577c7ad627`
+          :"https://newsapi.org/v2/top-headlines?country=in&apiKey=7041b7213f50405a972157577c7ad627"
           )
         
         console.log(data);
@@ -31,23 +31,17 @@ const Home = ({ cat }) => {
     <>
       <Hero />
       <h1 className='text-2xl font-bold underline p-10'>Top HeadLines</h1>
-       {
-          news ?  
-           news.map((i) => (
-           
-               <News 
-                 
-                   title={i.title}
-                   imgSrc={i.urlToImage}
-                   key={i.id} 
-                   content={i.content}
-                   url={i.url}
-                  
-                 />
-              
-                  ))
-                  : "Loading...."
-       }
+      {
+  news ? news.map((i, id) => (
+    <News 
+      key={id} 
+      title={i.title}
+      imgSrc={i.urlToImage}
+      content={i.content}
+      url={i.url}
+    />
+  )) : "Loading...."
+}
     </>
   )
 }

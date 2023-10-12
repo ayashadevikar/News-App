@@ -24,6 +24,7 @@ function App() {
                   <Route   path="/entertainment" element={<Home cat="entertainment"/>} />
                   <Route  path="/health" element={<Home cat="health"/>} />
                   <Route  path="/science" element={<Home cat="science"/>} />
+                  <Route  path="/sports" element={<Home cat="sports"/>} />
                   <Route   path="/technology" element={<Home cat="technology"/>} />
             </Routes>
 
