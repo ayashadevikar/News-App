@@ -13,8 +13,10 @@ const Home = ({ cat }) => {
 
         const fetchTopHeadings = async () => {
            const { data } = await axios.get(
-            `http://newsapi.org/v2/top-headlines?country=in&category=${cat}&apiKey=7041b7213f50405a972157577c7ad627`
-         
+            cat 
+            ?
+            `https://newsapi.org/v2/top-headlines?country=in&category=${cat}&apiKey=7041b7213f50405a972157577c7ad627`
+            :`https://newsapi.org/v2/everything?q=apple&from=2023-10-11&to=2023-10-11&sortBy=popularity&apiKey=7041b7213f50405a972157577c7ad627`
           )
         
         console.log(data);
