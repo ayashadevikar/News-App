@@ -13,14 +13,24 @@ const Home = ({ cat }) => {
 
         const fetchTopHeadings = async () => {
            const { data } = await axios.get(
-            cat 
+           
+            // `https://newsapi.org/v2/top-headlines?country=in&category=${cat}&apiKey=7041b7213f50405a972157577c7ad627`
+            // :`https://newsapi.org/v2/everything?q=apple&from=2023-10-11&to=2023-10-11&sortBy=popularity&apiKey=7041b7213f50405a972157577c7ad627`
+         
+
+             cat 
             ?
-            `https://newsapi.org/v2/top-headlines?country=in&category=${cat}&apiKey=7041b7213f50405a972157577c7ad627`
-            :`https://newsapi.org/v2/everything?q=apple&from=2023-10-11&to=2023-10-11&sortBy=popularity&apiKey=7041b7213f50405a972157577c7ad627`
-          )
+            `https://newsdata.io/api/1/news?apikey=pub_313847ddf3a9459fab992612edcae66828c00&category=${cat}&country=in`
+           : `https://newsdata.io/api/1/news?apikey=pub_313847ddf3a9459fab992612edcae66828c00&country=in`
+         
+            )
+
+
+        
+        
         
         console.log(data);
-        const news = data.articles;
+        const news = data.results;
         setNews(news);
        
     }
@@ -37,7 +47,7 @@ const Home = ({ cat }) => {
     <News 
       key={id} 
       title={i.title}
-      imgSrc={i.urlToImage}
+      imgSrc={i.image_url}
       content={i.content}
       url={i.url}
     />
