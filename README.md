@@ -4,7 +4,7 @@
 
 ## MyOutput
 
-![News App]()
+![News App](./public/news.png)
 
 # Getting Started with Create React App
 
