@@ -40,7 +40,7 @@ const Home = ({ cat }) => {
     <News 
       key={i.article_id} 
       title={i.title?i.title:""}
-      imgSrc={!i.image_url?"https://picsum.photos/200/300":i.image_url}
+      imgSrc={!i.image_url?"https://img.freepik.com/free-photo/minimalistic-home-desk-design_23-2148991431.jpg":i.image_url}
       content={i.content}
       url={i.link}
     />
